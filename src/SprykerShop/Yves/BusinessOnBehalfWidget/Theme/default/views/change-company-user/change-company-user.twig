@@ -6,7 +6,7 @@
 } %}
 
 {% block template %}
-    {% if data.isVisible and data.isCompanyUserChangeAllowed %}
+    {% if data.isVisible %}
         {{ parent() }}
     {% endif %}
 {% endblock %}

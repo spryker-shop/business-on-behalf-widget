@@ -155,7 +155,7 @@ class BusinessOnBehalfStatusWidget extends AbstractWidget
      */
     protected function addIsVisibleParameter(CustomerTransfer $customerTransfer)
     {
-        $this->addParameter(static::PARAMETER_IS_VISIBLE, (bool)$customerTransfer->getIsOnBehalf());
+        $this->addParameter(static::PARAMETER_IS_VISIBLE, true);
 
         return $this;
     }
