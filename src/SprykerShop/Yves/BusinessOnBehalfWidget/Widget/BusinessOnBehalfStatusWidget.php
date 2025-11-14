@@ -40,6 +40,11 @@ class BusinessOnBehalfStatusWidget extends AbstractWidget
      */
     protected const PARAMETER_IS_VISIBLE = 'isVisible';
 
+    /**
+     * @var bool
+     */
+    protected const VALUE_IS_VISIBLE = true;
+
     public function __construct()
     {
         $customerTransfer = $this->getCustomerTransfer();
@@ -155,7 +160,7 @@ class BusinessOnBehalfStatusWidget extends AbstractWidget
      */
     protected function addIsVisibleParameter(CustomerTransfer $customerTransfer)
     {
-        $this->addParameter(static::PARAMETER_IS_VISIBLE, true);
+        $this->addParameter(static::PARAMETER_IS_VISIBLE, static::VALUE_IS_VISIBLE);
 
         return $this;
     }
