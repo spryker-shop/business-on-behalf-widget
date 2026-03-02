@@ -56,25 +56,16 @@ class BusinessOnBehalfStatusWidget extends AbstractWidget
             ->addIsCompanyUserChangeAllowedParameter($customerTransfer);
     }
 
-    /**
-     * @return string
-     */
     public static function getName(): string
     {
         return 'BusinessOnBehalfStatusWidget';
     }
 
-    /**
-     * @return string
-     */
     public static function getTemplate(): string
     {
         return '@BusinessOnBehalfWidget/views/business-on-behalf-status/business-on-behalf-status.twig';
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerTransfer
-     */
     protected function getCustomerTransfer(): CustomerTransfer
     {
         $customerTransfer = $this->getFactory()

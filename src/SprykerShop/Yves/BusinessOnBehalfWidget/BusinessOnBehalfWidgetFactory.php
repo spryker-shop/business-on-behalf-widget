@@ -13,17 +13,11 @@ use SprykerShop\Yves\BusinessOnBehalfWidget\Dependency\Client\BusinessOnBehalfWi
 
 class BusinessOnBehalfWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\BusinessOnBehalfWidget\Dependency\Client\BusinessOnBehalfWidgetToCustomerClientInterface
-     */
     public function getCustomerClient(): BusinessOnBehalfWidgetToCustomerClientInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfWidgetDependencyProvider::CLIENT_CUSTOMER);
     }
 
-    /**
-     * @return \SprykerShop\Yves\BusinessOnBehalfWidget\Dependency\Client\BusinessOnBehalfWidgetToBusinessOnBehalfClientInterface
-     */
     public function getBusinessOnBehalfClient(): BusinessOnBehalfWidgetToBusinessOnBehalfClientInterface
     {
         return $this->getProvidedDependency(BusinessOnBehalfWidgetDependencyProvider::CLIENT_BUSINESS_ON_BEHALF);

@@ -25,21 +25,11 @@ class BusinessOnBehalfWidgetToBusinessOnBehalfClientBridge implements BusinessOn
         $this->businessOnBehalfClient = $businessOnBehalfClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserCollectionTransfer
-     */
     public function findActiveCompanyUsersByCustomerId(CustomerTransfer $customerTransfer): CompanyUserCollectionTransfer
     {
         return $this->businessOnBehalfClient->findActiveCompanyUsersByCustomerId($customerTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return bool
-     */
     public function isCompanyUserChangeAllowed(CustomerTransfer $customerTransfer): bool
     {
         return $this->businessOnBehalfClient->isCompanyUserChangeAllowed($customerTransfer);

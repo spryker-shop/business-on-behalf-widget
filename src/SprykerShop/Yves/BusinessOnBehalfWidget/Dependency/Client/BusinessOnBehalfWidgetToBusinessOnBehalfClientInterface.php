@@ -12,17 +12,7 @@ use Generated\Shared\Transfer\CustomerTransfer;
 
 interface BusinessOnBehalfWidgetToBusinessOnBehalfClientInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return \Generated\Shared\Transfer\CompanyUserCollectionTransfer
-     */
     public function findActiveCompanyUsersByCustomerId(CustomerTransfer $customerTransfer): CompanyUserCollectionTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
-     *
-     * @return bool
-     */
     public function isCompanyUserChangeAllowed(CustomerTransfer $customerTransfer): bool;
 }

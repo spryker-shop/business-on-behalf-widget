@@ -24,11 +24,6 @@ class BusinessOnBehalfWidgetDependencyProvider extends AbstractBundleDependencyP
      */
     public const CLIENT_BUSINESS_ON_BEHALF = 'CLIENT_BUSINESS_ON_BEHALF';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = $this->provideCustomerClient($container);
@@ -37,11 +32,6 @@ class BusinessOnBehalfWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function provideCustomerClient(Container $container): Container
     {
         $container->set(static::CLIENT_CUSTOMER, function (Container $container) {
@@ -51,11 +41,6 @@ class BusinessOnBehalfWidgetDependencyProvider extends AbstractBundleDependencyP
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function provideBusinessOnBehalfClient(Container $container): Container
     {
         $container->set(static::CLIENT_BUSINESS_ON_BEHALF, function (Container $container) {
